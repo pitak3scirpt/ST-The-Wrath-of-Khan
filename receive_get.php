@@ -15,12 +15,13 @@ $text = $StrGet;
 	
 	
 if (!is_null($text)) {
-//if (!empty($_POST)){
-	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
+
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cd90b89c39f5a695f6d6996c80829e269',
+  		// To Master Yoda
+		//'to' => 'Cd90b89c39f5a695f6d6996c80829e269',
+		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
