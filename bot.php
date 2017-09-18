@@ -31,6 +31,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			include 'fixyauth.php';
 
 			$result = curl_exec($ch);
 			curl_close($ch);
@@ -59,7 +60,7 @@ if (!is_null($events['events'])) {
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' => 'U554a18dbd36996fdb3dd95c218cf6db0',
+				'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
@@ -71,6 +72,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			include 'fixyauth.php';
 			$result = curl_exec($ch);
 			curl_close($ch);
 
@@ -78,7 +80,7 @@ if (!is_null($events['events'])) {
 			
 			// To group Mac Share
 			$data = [
-				'to' => 'Cc7ac9ccc51f05b2a60a1abed8cf85723',
+				'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
@@ -90,6 +92,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			include 'fixyauth.php';
 			$result = curl_exec($ch);
 			curl_close($ch);
 
@@ -104,7 +107,7 @@ if (!is_null($events['events'])) {
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
-				'to' => 'U554a18dbd36996fdb3dd95c218cf6db0',
+				'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
 				'messages' => [$messages]
 			];
 			$post = json_encode($data);
@@ -116,6 +119,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			include 'fixyauth.php';
 			$result = curl_exec($ch);
 			curl_close($ch);
 
@@ -128,7 +132,7 @@ if (!is_null($events['events'])) {
 			$togroupid = $event['source']['groupId'];
 			$replyToken = $event['replyToken'];
 			$text = $event['message']['text'];
-			if (($text == '00MacShare') and (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'U554a18dbd36996fdb3dd95c218cf6db0'))) {
+			if (($text == '00MacShare') and (($togroupid == 'Cd90b89c39f5a695f6d6996c80829e269') or ($togroupid == 'Cc7ac9ccc51f05b2a60a1abed8cf85723') or ($touserid == 'Uf95ee3607bc3d6696b2116de202f97d3'))) {
 				$url = 'https://api.line.me/v2/bot/message/reply';
 				$data = temp2imgcol3($replyToken);
 				$post = json_encode($data);
@@ -139,6 +143,7 @@ if (!is_null($events['events'])) {
 				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				include 'fixyauth.php';
 				$result = curl_exec($ch);
 				curl_close($ch);
 				echo $result . "\r\n";				
